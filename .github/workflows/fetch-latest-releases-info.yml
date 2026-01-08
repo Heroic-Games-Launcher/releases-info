@@ -1,0 +1,83 @@
+name: Fetch Latest Repo Info
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y jq curl coreutils
+
+      - name: Fetch latest releases and games.json hashes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "{}" > release-data.json
+
+          # -------------------------------
+          # Repositories with GitHub Releases
+          # -------------------------------
+          release_repos=(
+            "GloriousEggroll/proton-ge-custom"
+            "GloriousEggroll/wine-ge-custom"
+            "Gcenx/game-porting-toolkit"
+            "Gcenx/winecx"
+            "Gcenx/macOS_Wine_builds"
+          )
+
+          for repo in "${release_repos[@]}"; do
+            echo "Fetching release for $repo"
+            api="https://api.github.com/repos/$repo/releases/latest"
+
+            response=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$api")
+            tag=$(echo "$response" | jq -r '.tag_name')
+            date=$(echo "$response" | jq -r '.published_at')
+
+            jq --arg r "$repo" --arg t "$tag" --arg d "$date" \
+              '. + {($r): {latest_release: {tag: $t, published_at: $d}}}' \
+              release-data.json > tmp.json && mv tmp.json release-data.json
+          done
+
+          # -------------------------------
+          # Repositories with games.json
+          # -------------------------------
+          file_repos=(
+            "AreWeAntiCheatYet/AreWeAntiCheatYet"
+            "Heroic-Games-Launcher/MacAnticheatData"
+          )
+
+          for repo in "${file_repos[@]}"; do
+            echo "Fetching games.json for $repo"
+
+            raw_url="https://raw.githubusercontent.com/$repo/master/games.json"
+            tmp_file=$(mktemp)
+
+            # Download file + capture headers
+            headers=$(mktemp)
+            curl -sL -D "$headers" "$raw_url" -o "$tmp_file"
+
+            md5=$(md5sum "$tmp_file" | awk '{print $1}')
+            last_modified=$(grep -i '^last-modified:' "$headers" | sed 's/Last-Modified: //I')
+
+            jq --arg r "$repo" --arg m "$md5" --arg d "$last_modified" \
+              '. + {($r): {games_json: {md5: $m, last_modified: $d}}}' \
+              release-data.json > tmp.json && mv tmp.json release-data.json
+
+            rm "$tmp_file" "$headers"
+          done
+
+          cat release-data.json
+
+      - name: Commit JSON
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update latest releases and games.json MD5"
+          file_pattern: "release-data.json"
