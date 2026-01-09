@@ -31,6 +31,10 @@ jobs:
             ["game-porting-toolkit"]="Gcenx/game-porting-toolkit"
             ["wine-crossover"]="Gcenx/winecx"
             ["wine-staging"]="Gcenx/macOS_Wine_builds"
+            ["dxmt"]="3Shain/dxmt"
+            ["dxvk"]="doitsujin/dxvk"
+            ["vkd3d"]="HansKristian-Work/vkd3d-proton"
+            ["dxvk-mac"]="Gcenx/DXVK-macOS"
           )
 
           for key in "${!release_repos[@]}"; do
