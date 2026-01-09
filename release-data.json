@@ -3,6 +3,10 @@
     "tag": "Game-Porting-Toolkit-3.0",
     "published_at": "2025-12-05T22:00:24Z"
   },
+  "dxvk": {
+    "tag": "v2.7.1",
+    "published_at": "2025-08-30T10:23:06Z"
+  },
   "wine-staging": {
     "tag": "11.0-rc4",
     "published_at": "2025-12-27T02:20:00Z"
@@ -15,9 +19,21 @@
     "tag": "GE-Proton10-28",
     "published_at": "2026-01-01T22:56:26Z"
   },
+  "dxmt": {
+    "tag": "v0.72",
+    "published_at": "2025-12-11T01:00:06Z"
+  },
+  "dxvk-mac": {
+    "tag": "v1.10.3-20230507-repack",
+    "published_at": "2024-07-23T13:51:20Z"
+  },
   "wine-crossover": {
     "tag": "crossover-wine-23.7.1-1",
     "published_at": "2024-02-29T01:12:15Z"
+  },
+  "vkd3d": {
+    "tag": "v3.0b",
+    "published_at": "2025-12-10T09:49:00Z"
   },
   "anticheatFiles": {
     "shaMac": "9d28188379668a981b7657713f6306a4",
