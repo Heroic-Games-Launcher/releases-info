@@ -8,8 +8,8 @@
     "published_at": "2025-08-30T10:23:06Z"
   },
   "wine-staging": {
-    "tag": "11.0-rc5",
-    "published_at": "2026-01-10T01:54:06Z"
+    "tag": "11.0",
+    "published_at": "2026-01-14T01:24:44Z"
   },
   "wine-ge": {
     "tag": "GE-Proton8-26",
