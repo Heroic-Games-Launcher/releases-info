@@ -57,21 +57,25 @@ jobs:
           # -------------------------------
           linux_repo="AreWeAntiCheatYet/AreWeAntiCheatYet"
           mac_repo="Heroic-Games-Launcher/MacAnticheatData"
+          known_fixes_repo="Heroic-Games-Launcher/knwon_fixes"
 
           linux_tmp=$(mktemp)
           mac_tmp=$(mktemp)
+          known_fixes_tmp=$(mktemp)
 
           curl -sL "https://raw.githubusercontent.com/$linux_repo/master/games.json" -o "$linux_tmp"
           curl -sL "https://raw.githubusercontent.com/$mac_repo/master/games.json" -o "$mac_tmp"
+          curl -sL "https://raw.githubusercontent.com/$known_fixes_repo/master/known_fixes.json" -o "$known_fixes_tmp"
 
           shaLinux=$(md5sum "$linux_tmp" | awk '{print $1}')
           shaMac=$(md5sum "$mac_tmp" | awk '{print $1}')
+          shaKnownFixes=$(md5sum "$known_fixes_tmp" | awk '{print $1}')
 
-          jq --arg l "$shaLinux" --arg m "$shaMac" \
-            '. + {anticheatFiles: {shaMac: $m, shaLinux: $l}}' \
+          jq --arg l "$shaLinux" --arg m "$shaMac" --arg n "$shaKnownFixes" \
+            '. + {anticheatFiles: {shaMac: $m, shaLinux: $l}, knownFixesSha: $n}' \
             release-data.json > tmp.json && mv tmp.json release-data.json
 
-          rm "$linux_tmp" "$mac_tmp"
+          rm "$linux_tmp" "$mac_tmp" "$known_fixes_tmp"
 
           cat release-data.json
 
