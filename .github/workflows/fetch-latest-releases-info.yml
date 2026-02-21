@@ -33,7 +33,7 @@ jobs:
             ["wine-staging"]="Gcenx/macOS_Wine_builds"
             ["dxmt"]="3Shain/dxmt"
             ["dxvk"]="doitsujin/dxvk"
-            ["vkd3d"]="HansKristian-Work/vkd3d-proton"
+            ["vkd3d"]="Heroic-Games-Launcher/vkd3d-proton"
             ["dxvk-mac"]="Gcenx/DXVK-macOS"
           )
 
