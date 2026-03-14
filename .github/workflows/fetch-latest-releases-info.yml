@@ -57,7 +57,7 @@ jobs:
           # -------------------------------
           linux_repo="AreWeAntiCheatYet/AreWeAntiCheatYet"
           mac_repo="Heroic-Games-Launcher/MacAnticheatData"
-          known_fixes_repo="Heroic-Games-Launcher/knwon_fixes"
+          known_fixes_repo="Heroic-Games-Launcher/known-fixes"
 
           linux_tmp=$(mktemp)
           mac_tmp=$(mktemp)
@@ -68,7 +68,7 @@ jobs:
           echo "Fetching anticheat mac data"
           curl -sL "https://raw.githubusercontent.com/$mac_repo/main/games.json" -o "$mac_tmp"
           echo "Fetching known fixes data"
-          curl -sL "https://raw.githubusercontent.com/$known_fixes_repo/refs/heads/main/known_fixes.json" -o "$known_fixes_tmp"
+          curl -sL "https://raw.githubusercontent.com/$known_fixes_repo/main/known_fixes.json" -o "$known_fixes_tmp"
 
           shaLinux=$(md5sum "$linux_tmp" | awk '{print $1}')
           shaMac=$(md5sum "$mac_tmp" | awk '{print $1}')
