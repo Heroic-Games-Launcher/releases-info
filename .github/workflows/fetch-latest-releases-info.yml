@@ -63,9 +63,12 @@ jobs:
           mac_tmp=$(mktemp)
           known_fixes_tmp=$(mktemp)
 
+          echo "Fetching anticheat linux data"
           curl -sL "https://raw.githubusercontent.com/$linux_repo/master/games.json" -o "$linux_tmp"
-          curl -sL "https://raw.githubusercontent.com/$mac_repo/master/games.json" -o "$mac_tmp"
-          curl -sL "https://raw.githubusercontent.com/$known_fixes_repo/master/known_fixes.json" -o "$known_fixes_tmp"
+          echo "Fetching anticheat mac data"
+          curl -sL "https://raw.githubusercontent.com/$mac_repo/main/games.json" -o "$mac_tmp"
+          echo "Fetching known fixes data"
+          curl -sL "https://raw.githubusercontent.com/$known_fixes_repo/refs/heads/main/known_fixes.json" -o "$known_fixes_tmp"
 
           shaLinux=$(md5sum "$linux_tmp" | awk '{print $1}')
           shaMac=$(md5sum "$mac_tmp" | awk '{print $1}')
