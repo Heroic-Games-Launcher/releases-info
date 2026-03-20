@@ -15,6 +15,10 @@
     "tag": "GE-Proton8-26",
     "published_at": "2024-02-04T04:03:00Z"
   },
+  "proton-sarek": {
+    "tag": "Proton-Sarek10-29",
+    "published_at": "2026-02-02T07:17:36Z"
+  },
   "ge-proton": {
     "tag": "GE-Proton10-33",
     "published_at": "2026-03-18T00:35:56Z"
