@@ -31,6 +31,7 @@ jobs:
             ["game-porting-toolkit"]="Gcenx/game-porting-toolkit"
             ["wine-crossover"]="Gcenx/winecx"
             ["wine-staging"]="Gcenx/macOS_Wine_builds"
+            ["proton-sarek"]="pythonlover02/Proton-Sarek"
             ["dxmt"]="3Shain/dxmt"
             ["dxvk"]="doitsujin/dxvk"
             ["vkd3d"]="Heroic-Games-Launcher/vkd3d-proton"
