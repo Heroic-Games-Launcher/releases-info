@@ -32,6 +32,7 @@ jobs:
             ["wine-crossover"]="Gcenx/winecx"
             ["wine-staging"]="Gcenx/macOS_Wine_builds"
             ["proton-sarek"]="pythonlover02/Proton-Sarek"
+            ["proton-cachyos"]="CachyOS/proton-cachyos"
             ["dxmt"]="3Shain/dxmt"
             ["dxvk"]="doitsujin/dxvk"
             ["vkd3d"]="Heroic-Games-Launcher/vkd3d-proton"
