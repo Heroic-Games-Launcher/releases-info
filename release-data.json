@@ -31,6 +31,10 @@
     "tag": "v1.10.3-20230507-repack",
     "published_at": "2024-07-23T13:51:20Z"
   },
+  "proton-cachyos": {
+    "tag": "cachyos-10.0-20260330-slr",
+    "published_at": "2026-04-03T02:55:11Z"
+  },
   "wine-crossover": {
     "tag": "crossover-wine-23.7.1-1",
     "published_at": "2024-02-29T01:12:15Z"
