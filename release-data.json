@@ -8,8 +8,8 @@
     "published_at": "2025-08-30T10:23:06Z"
   },
   "wine-staging": {
-    "tag": "11.6",
-    "published_at": "2026-04-03T23:37:39Z"
+    "tag": "11.6_1",
+    "published_at": "2026-04-16T14:30:51Z"
   },
   "wine-ge": {
     "tag": "GE-Proton8-26",
@@ -32,12 +32,12 @@
     "published_at": "2024-07-23T13:51:20Z"
   },
   "proton-cachyos": {
-    "tag": "cachyos-10.0-20260408-slr",
-    "published_at": "2026-04-14T00:24:15Z"
+    "tag": "cachyos-10.0-20260409-slr",
+    "published_at": "2026-04-16T18:34:37Z"
   },
   "wine-crossover": {
-    "tag": "crossover-wine-23.7.1-1",
-    "published_at": "2024-02-29T01:12:15Z"
+    "tag": "null",
+    "published_at": "null"
   },
   "vkd3d": {
     "tag": "v2.14.1",
