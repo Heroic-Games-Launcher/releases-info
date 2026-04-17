@@ -29,7 +29,7 @@ jobs:
             ["ge-proton"]="GloriousEggroll/proton-ge-custom"
             ["wine-ge"]="GloriousEggroll/wine-ge-custom"
             ["game-porting-toolkit"]="Gcenx/game-porting-toolkit"
-            ["wine-crossover"]="Gcenx/winecx"
+            ["wine-crossover"]="Heroic-Games-Launcher/wine-crossover"
             ["wine-staging"]="Gcenx/macOS_Wine_builds"
             ["proton-sarek"]="pythonlover02/Proton-Sarek"
             ["proton-cachyos"]="CachyOS/proton-cachyos"
