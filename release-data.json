@@ -4,12 +4,12 @@
     "published_at": "2026-03-03T13:14:18Z"
   },
   "dxvk": {
-    "tag": "v3.0.1",
-    "published_at": "2026-07-05T18:28:19Z"
+    "tag": "v3.0.2",
+    "published_at": "2026-07-17T22:38:22Z"
   },
   "wine-staging": {
-    "tag": "11.10",
-    "published_at": "2026-06-04T14:47:19Z"
+    "tag": "11.13",
+    "published_at": "2026-07-17T17:13:02Z"
   },
   "wine-ge": {
     "tag": "GE-Proton8-26",
