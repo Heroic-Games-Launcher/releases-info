@@ -4,8 +4,8 @@
     "published_at": "2026-03-03T13:14:18Z"
   },
   "dxvk": {
-    "tag": "v3.1",
-    "published_at": "2026-08-28T16:23:29Z"
+    "tag": "v3.1.1",
+    "published_at": "2026-09-15T17:43:25Z"
   },
   "wine-staging": {
     "tag": "11.17",
@@ -20,8 +20,8 @@
     "published_at": "2026-02-02T07:17:36Z"
   },
   "ge-proton": {
-    "tag": "GE-Proton11-6",
-    "published_at": "2026-08-28T21:37:07Z"
+    "tag": "GE-Proton11-7",
+    "published_at": "2026-09-16T02:28:16Z"
   },
   "dxmt": {
     "tag": "v0.80",
