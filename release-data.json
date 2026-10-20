@@ -20,8 +20,8 @@
     "published_at": "2026-02-02T07:17:36Z"
   },
   "ge-proton": {
-    "tag": "GE-Proton11-9",
-    "published_at": "2026-10-14T00:14:59Z"
+    "tag": "GE-Proton11-11",
+    "published_at": "2026-10-19T18:20:53Z"
   },
   "dxmt": {
     "tag": "v0.80",
@@ -47,5 +47,5 @@
     "shaMac": "9848ab1e845afdbccb6eec3846e2ba10",
     "shaLinux": "fe3c9f24395054d75dc164b73520d45e"
   },
-  "knownFixesSha": "5e76a9176fcef75dedb544298da400f1"
+  "knownFixesSha": "d138c0a4fa3eb06e4a6b178ad56fcae5"
 }
