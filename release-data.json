@@ -45,7 +45,7 @@
   },
   "anticheatFiles": {
     "shaMac": "9848ab1e845afdbccb6eec3846e2ba10",
-    "shaLinux": "fe3c9f24395054d75dc164b73520d45e"
+    "shaLinux": "3ba2a3adc0e2d0545e8fe9da9cc91a0f"
   },
-  "knownFixesSha": "d138c0a4fa3eb06e4a6b178ad56fcae5"
+  "knownFixesSha": "7350ed2ff0e3e71d678566dd6d16663a"
 }
